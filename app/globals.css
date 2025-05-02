@@ -241,8 +241,8 @@ body::before {
   width: 100%;
   font-family: 'Bebas Neue', cursive;
   font-size: 1rem;
-  color: #3b82f6;
-  background-color: #111827;
+  color: white;
+  background-color: #343e55;
 }
 
 /* Borrowed Book */
