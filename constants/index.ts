@@ -43,7 +43,7 @@ export const sampleBooks = [
         color: "#2E8B57",
         cover: "https://images-na.ssl-images-amazon.com/images/I/81o8SNPuY7L._AC_UL600_SR600,600_.jpg",
         video: "https://example.com/videos/silent-forest-trailer.mp4",
-        summary: "When a young girl goes missing, a journalist uncovers chilling secrets hidden deep in the forest."
+        summary: "When a young girl goes missing, a journalist uncovers chilling secrets hidden deep in the forest.",
     },
     {
         id: 2,
@@ -57,7 +57,7 @@ export const sampleBooks = [
         color: "#4682B4",
         cover: "https://m.media-amazon.com/images/I/91++BOonLSL._UF1000,1000_QL80_.jpg",
         video: "https://example.com/videos/future-bound-trailer.mp4",
-        summary: "After discovering a time portal, a scientist races against time to prevent a global catastrophe."
+        summary: "After discovering a time portal, a scientist races against time to prevent a global catastrophe.",
     },
     {
         id: 3,
