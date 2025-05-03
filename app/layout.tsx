@@ -2,6 +2,8 @@ import type {Metadata} from "next";
 import {Geist, Geist_Mono} from "next/font/google";
 import "./globals.css";
 import {ReactNode} from "react";
+import {SessionProvider} from "next-auth/react";
+import {auth} from "@/auth";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -18,18 +20,23 @@ export const metadata: Metadata = {
     description: "BookWise is a book borrowing university library management solution.",
 };
 
-const RootLayout = ({
-                        children,
-                    }: {
+const RootLayout = async ({
+                              children,
+                          }: {
     children: ReactNode;
 }) => {
+
+    const session = await auth();
+
     return (
         <html lang="en">
-        <body
-            className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
-        {children}
-        </body>
+        <SessionProvider session={session}>
+            <body
+                className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+            >
+            {children}
+            </body>
+        </SessionProvider>
         </html>
     );
 }
