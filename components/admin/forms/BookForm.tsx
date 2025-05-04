@@ -11,6 +11,7 @@ import {bookSchema} from "@/lib/validations";
 import {Textarea} from "@/components/ui/textarea";
 import {Button} from "@/components/ui/button";
 import ColorPicker from "@/components/admin/ColorPicker";
+import {createBook} from "@/lib/admin/actions/book";
 
 
 interface Props extends Partial<Book> {
@@ -40,6 +41,10 @@ const BookForm = ({
     })
 
     const onSubmit = async (values: z.infer<typeof bookSchema>) => {
+        const result = await createBook(values);
+
+        // router.push(`/admin/books/${result.data.id}`);
+        router.push(`/admin/books/`);
     }
 
 
