@@ -20,7 +20,7 @@ const Layout = async ({children}: { children: ReactNode }) => {
         .where(eq(users.id, session.user.id))
         .limit(1)
         .then((result) => result[0]?.isAdmin === "ADMIN");
-    ;
+
 
     if(!isAdmin) redirect("/");
 
