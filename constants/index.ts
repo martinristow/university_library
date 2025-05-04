@@ -56,23 +56,6 @@ export const navigationLinks = [
     },
 ];
 
-export const adminSideBarLinks = [
-    {
-        img: "/icons/admin.svg",
-        route: "/admin",
-        text: "Home",
-    },
-    {
-        img: "/icons/admin.svg",
-        route: "/admin/users",
-        text: "All Users",
-    },
-    {
-        img: "/icons/admin.svg",
-        route: "/admin/books",
-        text: "All Books",
-    }
-]
 
 export const sampleBooks = [
     {
