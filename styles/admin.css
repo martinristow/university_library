@@ -1,6 +1,6 @@
 /* Base styles */
 :root {
-    --primary-admin: #aeabe3;
+    --primary-admin: #08289e;
     --light-300: #f5f7fa;
     --light-400: #e2e8f0;
     --light-500: #94a3b8;
@@ -138,7 +138,7 @@
 }
 
 .book-form_btn:hover {
-    background-color: rgba(67, 56, 202, 0.95);
+    background-color: rgba(10, 34, 197, 0.95);
 }
 
 /* Home Page */
