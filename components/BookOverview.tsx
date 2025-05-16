@@ -1,7 +1,11 @@
 import React from 'react'
 import Image from "next/image";
-import {Button} from "@/components/ui/button";
 import BookCover from "@/components/BookCover";
+import BorrowBook from "@/components/BorrowBook";
+
+interface Props extends Book {
+    userId: string;
+}
 
 export const BookOverview = ({
                                  title,
@@ -12,8 +16,10 @@ export const BookOverview = ({
                                  availableCopies,
                                  description,
                                  coverColor,
-                                 coverUrl
-                             }: Book) => {
+                                 coverUrl,
+                                 id,
+                                 userId,
+                             }: Props) => {
     return (
         <section className="book-overview">
             <div className="flex flex-col gap-5 lg:flex-row lg:justify-between">
@@ -42,10 +48,7 @@ export const BookOverview = ({
                     </div>
 
                     <div>
-                        <Button className="book-overview_btn">
-                            <Image src="/icons/book.svg" alt="book" width={20} height={20}/>
-                            <p className="text-xl font-mono text-black">Borrow</p>
-                        </Button>
+                        <BorrowBook userId={userId} bookId={id} />
                     </div>
                 </div>
 
